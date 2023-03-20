@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@await Html.PartialAsync("~/Views/Shared/PartialView/UserLayoutPartialView/HeadPartial.cshtml")
+<body>
+	
+	<header>
+		<div class="top-bar_sub_w3layouts container-fluid">
+			<div class="row">
+				<div class="col-md-4 logo text-left">
+					<a class="navbar-brand" href="index.html">
+						<i class="fab fa-linode"></i> BlogPost
+					</a>
+				</div>
+				@await Html.PartialAsync("~/Views/Shared/PartialView/UserLayoutPartialView/TopSectionPartial.cshtml")
+				@await Html.PartialAsync("~/Views/Shared/PartialView/UserLayoutPartialView/SocialMediaPartial.cshtml")
+			</div>
+		</div>
+
+  @await Html.PartialAsync("~/Views/Shared/PartialView/UserLayoutPartialView/NavbarPartial.cshtml")
+	</header>
+
+	<div class="banner-inner"></div>
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a href="index.html">Home</a>
+		</li>
+		<li class="breadcrumb-item active">Blog3</li>
+	</ol>
+	
+
+
+    @RenderBody()
+
+
+
+
+	@await Html.PartialAsync("~/Views/Shared/PartialView/UserLayoutPartialView/FooterPartial.cshtml")
+
+	@await Html.PartialAsync("~/Views/Shared/PartialView/UserLayoutPartialView/ScriptPartial.cshtml")
+
+</body>
+
+</html>
