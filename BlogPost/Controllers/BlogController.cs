@@ -19,5 +19,6 @@ namespace BlogPost.Controllers
             var values = _blogManager.TGetBlogByID(id);
 			return View(values);
         }
+
     }
 }
