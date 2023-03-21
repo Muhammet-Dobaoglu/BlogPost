@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,11 @@ namespace BusinessLayer.Concrete
 		public List<Blog> TGetBlogByID(int id)
 		{
 			return _blogDal.GetListByFilter(x => x.BlogID == id);
+		}
+
+		public List<Blog> TGetListWithWriter(int id)
+		{
+			return _blogDal.GetListByFilter(x => x.WriterId == id);
 		}
 	}
 }
