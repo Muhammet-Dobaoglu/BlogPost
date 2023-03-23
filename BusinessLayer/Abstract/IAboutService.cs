@@ -11,8 +11,3 @@ namespace BusinessLayer.Abstract
     {
     }
 }
-
-
-
-
-
